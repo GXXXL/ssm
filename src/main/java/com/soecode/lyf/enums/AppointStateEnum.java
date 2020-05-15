@@ -7,27 +7,27 @@ public enum AppointStateEnum {
 
 	SUCCESS(1, "预约成功"), NO_NUMBER(0, "库存不足"), REPEAT_APPOINT(-1, "重复预约"), INNER_ERROR(-2, "系统异常");
 
-	private int state;
+	private int status;
 
-	private String stateInfo;
+	private String statusInfo;
 
-	private AppointStateEnum(int state, String stateInfo) {
-		this.state = state;
-		this.stateInfo = stateInfo;
+	private AppointStateEnum(int status, String statusInfo) {
+		this.status = status;
+		this.statusInfo = statusInfo;
 	}
 
 	public int getState() {
-		return state;
+		return status;
 	}
 
 	public String getStateInfo() {
-		return stateInfo;
+		return statusInfo;
 	}
 
-	public static AppointStateEnum stateOf(int index) {
-		for (AppointStateEnum state : values()) {
-			if (state.getState() == index) {
-				return state;
+	public static AppointStateEnum statusOf(int index) {
+		for (AppointStateEnum status : values()) {
+			if (status.getState() == index) {
+				return status;
 			}
 		}
 		return null;

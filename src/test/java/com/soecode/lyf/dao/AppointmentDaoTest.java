@@ -21,8 +21,8 @@ public class AppointmentDaoTest extends BaseTest {
 
 	@Test
 	public void testQueryByKeyWithBook() throws Exception {
-		long bookId = 1000;
-		long studentId = 12345678910L;
+		long bookId = 1001;
+		long studentId = 1234567890L;
 		Appointment appointment = appointmentDao.queryByKeyWithBook(bookId, studentId);
 		System.out.println(appointment);
 		System.out.println(appointment.getBook());

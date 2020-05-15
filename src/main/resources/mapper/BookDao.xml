@@ -9,7 +9,7 @@
 		SELECT
 			book_id,
 			name,
-			number
+			count
 		FROM
 			book
 		WHERE
